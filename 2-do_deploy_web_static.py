@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-# Fabfile to distribute an archive to a web server.
+"""
+fabric
+""".
 import os.path
 from fabric.api import env
 from fabric.api import put
@@ -9,9 +11,9 @@ env.hosts = ["54.160.85.72", "35.175.132.106"]
 
 
 def do_deploy(archive_path):
-    """Distributes an archive to a web server.
+    """archive to a web server.
     Args:
-        archive_path (str): The path of the archive to distribute.
+        archive_path (str): the archive to distribute.
     Returns:
         If the file doesn't exist at archive_path or an error occurs - False.
         Otherwise - True.
